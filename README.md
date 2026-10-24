@@ -12,6 +12,7 @@ An agent skill and local Python tools for reference-preserving sprite animation:
 | 流程 | 做法 | 适用范围 |
 |---|---|---|
 | 原腿型走路 | 整条原裤腿和鞋小幅刚性运动，左右错开半周期 | 朝向不变、双腿可分离的小步走路 |
+| 斜侧人形走路参考 | 固定近远腿、脚轨迹、受控膝弯、鞋视角与前后摆臂 | 按角色制作局部脚本；不是走路 CLI 的新模式 |
 | 原腿型跳跃 | 整腿整数平移、浅蹲蓄力、抛物线腾空、落地缓冲 | 原地小跳，衣身与腿根有足够重叠 |
 | 短腿跑步参考 | 原脚块平移、前后换腿、短暂腾空、屈肘和提包摆臂 | 按角色编写局部渲染脚本；不是现有走路 CLI 的模式 |
 | 生图序列整理 | 参考图生图后，注册、锁定固定区域并检查循环 | 张嘴、喷嚏、新姿势或其他需要补画的内容 |
@@ -49,6 +50,7 @@ python scripts/cutout_walk.py --image character.png --config walk.json --out out
 ## 参数与质量边界
 
 - [走路配置](references/cutout-walk.md) · [跳跃配置](references/cutout-jump.md) · [短腿跑步参考](references/cutout-run.md) · [提包手臂](references/carrying-arm.md) · [生图序列流程](references/generated-sequence.md)。按需要读取对应文档即可。
+- [斜侧角色走路](references/three-quarter-walk.md)：记录已认可的 12 帧设计、手脚共用节奏、近臂前景遮挡及鞋视角修正；保留“仍有浮动感”的质量边界，不附第三方角色图片。
 - 示例中的鳄鱼裁框对应一张特定的 200×200 原图。仓库未包含该私人角色素材；换图后需要重新确定裁框，不能直接套坐标。
 - 紧凑角色跑步参数对应另一张 32×42 原图，是制作参考而非 CLI 配置。样例坐标、脚宽和 12 帧参数不可作为所有角色的固定规则。
 - 朝向改变、深蹲、明显屈膝、缺失肢体或新可见内容需要额外素材。当前部件脚本不会自动补出这些轮廓。
