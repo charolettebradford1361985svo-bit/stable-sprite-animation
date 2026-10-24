@@ -58,6 +58,8 @@ python scripts/cutout_walk.py --image character.png --config walk.json --out out
 - 合成站姿仍需检查胯部、袖口和半透明边缘；部件保形、循环公式和首尾一致都不能单独证明动作自然。
 - 跳跃样例有 12 张 PNG、11 个独特画面，首末站稳姿势相同。GIF 还可能合并相邻相同帧，报告会区分这些数量并保留时长。
 
+身体露底、局部像素缺失或头发摆动，参阅 [身体补全与逐帧检查](references/integrity-and-secondary-motion.md)：覆盖掩码与封闭洞检测互补，检查最终 GIF，并保留已认可动作。不是自动毛发模拟或通用补全模型。
+
 ## 开发与维护
 
 ```text
