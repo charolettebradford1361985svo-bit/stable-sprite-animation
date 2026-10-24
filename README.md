@@ -5,7 +5,7 @@
 
 把角色参考图、动作提示词和帧数，变成透明 PNG 序列和 GIF 的 **Codex / AI agent 技能与 Python 工具**。重点是保留角色部件、控制动作节奏和检查循环衔接。
 
-An agent skill and local Python tools for reference-preserving sprite animation: intact-limb walks, small jumps, and alignment of generated sequences.
+An agent skill and local Python tools for reference-preserving sprite animation: intact-limb walks, small jumps, compact run recipes, and alignment of generated sequences.
 
 ## 支持的流程
 
@@ -13,6 +13,7 @@ An agent skill and local Python tools for reference-preserving sprite animation:
 |---|---|---|
 | 原腿型走路 | 整条原裤腿和鞋小幅刚性运动，左右错开半周期 | 朝向不变、双腿可分离的小步走路 |
 | 原腿型跳跃 | 整腿整数平移、浅蹲蓄力、抛物线腾空、落地缓冲 | 原地小跳，衣身与腿根有足够重叠 |
+| 短腿跑步参考 | 原脚块平移、前后换腿、短暂腾空、屈肘和提包摆臂 | 按角色编写局部渲染脚本；不是现有走路 CLI 的模式 |
 | 生图序列整理 | 参考图生图后，注册、锁定固定区域并检查循环 | 张嘴、喷嚏、新姿势或其他需要补画的内容 |
 
 agent 负责判断方法、选择部件裁框与锚点、安排逐帧参数。前两条流程使用本地 Pillow、NumPy、OpenCV；需要补画时使用所在 agent 环境提供的生图能力。本仓库不含模型权重、API 凭据或付费服务。
@@ -47,8 +48,9 @@ python scripts/cutout_walk.py --image character.png --config walk.json --out out
 
 ## 参数与质量边界
 
-- [走路配置](references/cutout-walk.md) · [跳跃配置](references/cutout-jump.md) · [生图序列流程](references/generated-sequence.md)。按需要读取对应文档即可。
+- [走路配置](references/cutout-walk.md) · [跳跃配置](references/cutout-jump.md) · [短腿跑步参考](references/cutout-run.md) · [提包手臂](references/carrying-arm.md) · [生图序列流程](references/generated-sequence.md)。按需要读取对应文档即可。
 - 示例中的鳄鱼裁框对应一张特定的 200×200 原图。仓库未包含该私人角色素材；换图后需要重新确定裁框，不能直接套坐标。
+- 紧凑角色跑步参数对应另一张 32×42 原图，是制作参考而非 CLI 配置。样例坐标、脚宽和 12 帧参数不可作为所有角色的固定规则。
 - 朝向改变、深蹲、明显屈膝、缺失肢体或新可见内容需要额外素材。当前部件脚本不会自动补出这些轮廓。
 - 固定部位可以随身体整体移动，验证在身体局部坐标中进行。“原像素保留”不意味着整个角色永远停在画布的同一位置。
 - 合成站姿仍需检查胯部、袖口和半透明边缘；部件保形、循环公式和首尾一致都不能单独证明动作自然。
