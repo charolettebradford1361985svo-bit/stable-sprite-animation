@@ -1,0 +1,23 @@
+name: 动作或流程建议
+description: 描述真实使用场景和希望改善的结果。
+title: "[Feature] "
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: 使用场景
+      description: 角色类型、动作、帧数，以及现有流程哪里不够用。
+    validations:
+      required: true
+  - type: textarea
+    id: desired_result
+    attributes:
+      label: 希望达到的效果
+      description: 说明哪些部位必须保持、哪些可以运动，以及如何判断完成。不必预先指定技术方案。
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: 可选参考
+      description: 可提供你有权公开的示例、配置或链接；不要附带私人素材、密钥或本机私密路径。

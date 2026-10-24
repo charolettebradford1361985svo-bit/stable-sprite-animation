@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "action": "保持原腿型的原地小跳，轻蹲蓄力、腾空、落地缓冲后站稳",
+  "frame_count": 12,
+  "ground_y": 154,
+  "flight": {"height_px": 28, "duration_ms": 400},
+  "body": {
+    "clear_rects": [[84,138,134,166],[128,110,144,140]],
+    "fixed_boxes": [[55,35,166,101]]
+  },
+  "legs": [
+    {"name":"left","box":[86,134,104,157],"ankle":[98,151]},
+    {"name":"right","box":[108,134,131,157],"ankle":[116,151],"exclude_rects":[[126,134,131,149]]}
+  ],
+  "arms": [
+    {"name":"free_arm","box":[126,108,141,138],"pivot":[128,111],"angles_degrees":[0,6,10,-8,-22,-30,-26,-12,-6,4,1,0]}
+  ],
+  "poses": [
+    {"stage":"rest",         "body_y":0,    "flight_time_ms":null,"leg_down_px":0,"leg_inset_px":0,"duration_ms":240},
+    {"stage":"anticipation", "body_y":2,    "flight_time_ms":null,"leg_down_px":0,"leg_inset_px":0,"duration_ms":80},
+    {"stage":"compression",  "body_y":4,    "flight_time_ms":null,"leg_down_px":0,"leg_inset_px":0,"duration_ms":100},
+    {"stage":"push_off",     "body_y":0,    "flight_time_ms":null,"leg_down_px":0,"leg_inset_px":0,"duration_ms":60},
+    {"stage":"ascending",    "body_y":null, "flight_time_ms":60,  "leg_down_px":0,"leg_inset_px":0,"duration_ms":80},
+    {"stage":"near_apex",    "body_y":null, "flight_time_ms":140, "leg_down_px":1,"leg_inset_px":1,"duration_ms":100},
+    {"stage":"turning_down", "body_y":null, "flight_time_ms":240, "leg_down_px":1,"leg_inset_px":1,"duration_ms":100},
+    {"stage":"descent",      "body_y":null, "flight_time_ms":340, "leg_down_px":0,"leg_inset_px":0,"duration_ms":60},
+    {"stage":"contact",      "body_y":0,    "flight_time_ms":null,"leg_down_px":0,"leg_inset_px":0,"duration_ms":50},
+    {"stage":"absorb",       "body_y":3,    "flight_time_ms":null,"leg_down_px":0,"leg_inset_px":0,"duration_ms":80},
+    {"stage":"recover",      "body_y":1,    "flight_time_ms":null,"leg_down_px":0,"leg_inset_px":0,"duration_ms":90},
+    {"stage":"rest",         "body_y":0,    "flight_time_ms":null,"leg_down_px":0,"leg_inset_px":0,"duration_ms":300}
+  ],
+  "preview": {"box":[35,0,175,175],"scale":3,"background":[218,218,218]}
+}

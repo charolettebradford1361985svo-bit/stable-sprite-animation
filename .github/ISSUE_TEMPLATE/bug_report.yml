@@ -1,0 +1,38 @@
+name: 动画或脚本问题
+description: 提供最小复现，帮助定位动作、像素、循环或导出错误。
+title: "[Bug] "
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: 版本与环境
+      description: 技能版本或 commit、操作系统、Python 版本；使用 agent 时也写明名称。
+      placeholder: v0.3.0 / Windows 11 / Python 3.12 / Codex
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 最小复现
+      description: 写出动作、帧数和执行命令或提示词，并附不含本机私密路径的配置。若无法公开角色图，可用简化素材复现。
+    validations:
+      required: true
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: 预期与实际结果
+      description: 指出问题帧、部位或循环边界；例如第 12 帧接第 1 帧时脚底跳动。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 报告与截图
+      description: 可附 validation.json、motion.json、visual-review.json、错误日志及相关 PNG/GIF。说明是否实际播放；不要上传密钥、令牌或私人文件路径。
+  - type: checkboxes
+    id: asset_rights
+    attributes:
+      label: 素材公开
+      options:
+        - label: 如附带图片或动画，我有权公开这些素材；如未附带素材，则此项不适用。
+          required: true

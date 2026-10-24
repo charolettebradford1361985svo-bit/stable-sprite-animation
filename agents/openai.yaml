@@ -1,0 +1,6 @@
+interface:
+  display_name: "稳定角色序列动画"
+  short_description: "角色图、动作和帧数转透明PNG与GIF，固定部位锁定并检查循环衔接"
+  default_prompt: "使用 $stable-sprite-animation，根据我上传的角色图、动作提示词和帧数生成透明 PNG 序列及 GIF，检查固定部位和循环收尾。"
+policy:
+  allow_implicit_invocation: true
