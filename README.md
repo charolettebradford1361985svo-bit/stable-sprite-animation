@@ -50,6 +50,8 @@ python scripts/cutout_walk.py --image character.png --config walk.json --out out
 
 ## 参数与质量边界
 
+先读 [步态表现选择](references/gait-readability.md)：长腿通常需要清楚的前后换腿，短粗腿可以弱化交叉，靠短步和承重节奏表达；同时考虑视角、遮挡与实际显示尺寸，不改变原腿型来套统一动作。
+
 - [走路配置](references/cutout-walk.md) · [跳跃配置](references/cutout-jump.md) · [短腿跑步参考](references/cutout-run.md) · [提包手臂](references/carrying-arm.md) · [生图序列流程](references/generated-sequence.md)。按需要读取对应文档即可。
 - [斜侧角色走路](references/three-quarter-walk.md)：记录已认可的 12 帧设计、手脚共用节奏、近臂前景遮挡及鞋视角修正；保留“仍有浮动感”的质量边界，不附第三方角色图片。
 - 示例中的鳄鱼裁框对应一张特定的 200×200 原图。仓库未包含该私人角色素材；换图后需要重新确定裁框，不能直接套坐标。
