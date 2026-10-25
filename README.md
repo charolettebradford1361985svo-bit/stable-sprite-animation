@@ -67,6 +67,8 @@ python scripts/cutout_walk.py --image character.png --config walk.json --out out
 
 小尺寸面部动作参阅 [动作参考与原生网格重画](references/native-grid-redraw.md)：保持连贯下颌和原图像素尺度，避免缩放嘴部贴片。本案例动作结构基本认可，粗像素修正尚待实际验证。
 
+动画默认采用 [独立审阅与逐版修订](references/independent-review.md)：主 agent 制作、子 agent 只读审阅，最多三轮修订（V01 初版至 V04），每版保留并一起交付。无委派能力时明确降级自审，未播放不能声称播放验收；这是 agent 工作流，不是新增 CLI 自动修复功能。
+
 ## 开发与维护
 
 ```text
