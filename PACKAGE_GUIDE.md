@@ -26,7 +26,7 @@
 
 0.3.5 增加 `references/gait-readability.md`：按可见腿长、视角和遮挡选择步态表现，长腿重换腿可读性，短腿重原腿型、短步与承重节奏。现有脚本约束不变。
 
-0.3.6 新增 `references/object-routing.md` 和 `references/visual-examples.md`：先分角色与物品／环境物，按结构及动作读取匹配图片，不加载全部案例或套固定参数。树木尚无认可结果。
+0.3.6 新增 `references/object-routing.md`：先分角色与物品／环境物，按结构及动作读取匹配文字参考，不加载全部案例或套固定参数。树木尚无认可结果。本版暂不附图片示例。
 
 ## 环境
 

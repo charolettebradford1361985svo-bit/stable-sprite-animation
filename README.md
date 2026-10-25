@@ -9,7 +9,7 @@ An agent skill and local Python tools for reference-preserving sprite animation:
 
 ## 支持的流程
 
-先读 [对象分类](references/object-routing.md)，再查看匹配的 [图片示例](references/visual-examples.md)。角色与物品／环境物分开选择制作方法；分类是参考入口，不是固定动画模板。
+先读 [对象分类](references/object-routing.md)，再按需读取匹配的制作参考；本版暂不附图片示例。角色与物品／环境物分开选择制作方法；分类是参考入口，不是固定动画模板。
 
 | 流程 | 做法 | 适用范围 |
 |---|---|---|
