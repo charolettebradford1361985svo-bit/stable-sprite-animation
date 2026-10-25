@@ -9,6 +9,8 @@ An agent skill and local Python tools for reference-preserving sprite animation:
 
 ## 支持的流程
 
+先读 [对象分类](references/object-routing.md)，再按需读取匹配的制作参考；本版暂不附图片示例。角色与物品／环境物分开选择制作方法；分类是参考入口，不是固定动画模板。
+
 | 流程 | 做法 | 适用范围 |
 |---|---|---|
 | 原腿型走路 | 整条原裤腿和鞋小幅刚性运动，左右错开半周期 | 朝向不变、双腿可分离的小步走路 |
